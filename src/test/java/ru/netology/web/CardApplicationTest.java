@@ -1,3 +1,5 @@
+package ru.netology.web;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -11,8 +13,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+public class CardApplicationTest {
 
-public class CardServiceWebTest {
     private WebDriver driver;
 
     @BeforeAll
@@ -22,7 +24,7 @@ public class CardServiceWebTest {
 
 
     @BeforeEach
-    void setUp() {
+    void setUp(){
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
@@ -51,6 +53,8 @@ public class CardServiceWebTest {
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", actualText);
 
         //Thread.sleep(5000);
-
     }
+
+
+
 }
